@@ -4,7 +4,8 @@ angular.module('sammyC').config(function($routeProvider, $locationProvider) {
   // Specifying what controllers and views to use on what route
   $routeProvider
     .when('/', {
-      templateUrl: 'views/home.html'
+      templateUrl: 'views/home.html',
+      controller: 'HomeCtrl'
     })
     .otherwise('/')
 })

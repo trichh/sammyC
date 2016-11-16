@@ -1,0 +1,84 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+#container {
+  width: 100%;
+}
+#container header img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 15px;
+  width: 300px;
+}
+#container nav ul, #container nav ul li {
+  display: inline-block;
+}
+#container nav {
+  margin: 0 auto;
+  width: 400px;
+}
+#container nav ul li:not(:last-of-type) {
+  margin-right: 30px;
+}
+#container nav ul li a img {
+  width: 35px;
+}
+#container #gallery {
+  margin: 0 auto;
+  width: 395px;
+}
+#container #gallery img:first-of-type,  #container #gallery img:last-of-type {
+  margin-bottom: 60px;
+  width: 35px;
+}
+#container #gallery img.mySlides, #container #gallery video {
+  height: 150px;
+  width: 300px;
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    background-color: grey;
+  }
+  #container {
+    background-color: black;
+    border: solid 3px white;
+    margin: 35px auto;
+    width: 75%;
+  }
+  #container header img {
+    padding-bottom: 25px;
+    width: 450px;
+  }
+  #container nav {
+    margin-bottom: 25px;
+    width: 500px;
+  }
+  #container nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  #container nav ul li:not(:last-of-type) {
+    margin-right: 64px;
+  }
+  #container nav ul li a img {
+    width: 45px;
+  }
+  #container #gallery {
+    margin: 0 auto 25px auto;
+    width: 725px;
+  }
+  #container #gallery img:first-of-type,  #container #gallery img:last-of-type {
+    margin-bottom: 125px;
+  }
+  #container #gallery img.mySlides, #container #gallery video {
+    height: 300px;
+    width: 600px;
+  }
+}
