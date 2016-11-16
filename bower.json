@@ -1,0 +1,25 @@
+{
+  "name": "sammy-c",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Tyler Richard"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.7",
+    "angular-route": "1.5.7",
+    "angular-animate": "1.5.7",
+    "angular-resource": "1.5.7"
+  }
+}
