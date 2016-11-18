@@ -34,23 +34,17 @@ body {
   width: 395px;
 }
 #container #gallery img:first-of-type,  #container #gallery img:last-of-type {
-  margin-bottom: 60px;
+  margin-bottom: 90px;
   width: 35px;
 }
 #container #gallery img.mySlides, #container #gallery video {
-  height: 150px;
+  height: 225px;
   width: 300px;
 }
 
 @media screen and (min-width: 950px) {
-  body {
-    background-color: grey;
-  }
   #container {
-    background-color: black;
-    border: solid 3px white;
-    margin: 35px auto;
-    width: 75%;
+    margin: 0 auto;
   }
   #container header img {
     padding-bottom: 25px;
@@ -75,10 +69,24 @@ body {
     width: 725px;
   }
   #container #gallery img:first-of-type,  #container #gallery img:last-of-type {
-    margin-bottom: 125px;
+    margin-bottom: 175px;
   }
   #container #gallery img.mySlides, #container #gallery video {
-    height: 300px;
-    width: 600px;
+    height: 400px;
+    padding: 0 17px;
+    width: 84%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #container #gallery {
+    width: 850px;
+  }
+  #container #gallery img:first-of-type,  #container #gallery img:last-of-type {
+    margin-bottom: 175px;
+  }
+  #container #gallery img.mySlides, #container #gallery video {
+    height: 400px;
+    padding: 0 17px;
+    width: 84%;
   }
 }
