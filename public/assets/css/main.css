@@ -41,6 +41,7 @@ body {
   width: 317px;
 }
 #container #gallery img:first-of-type,  #container #gallery img:last-of-type {
+  cursor: pointer;
   margin-bottom: 90px;
   width: 35px;
 }
@@ -49,6 +50,7 @@ body {
   width: 300px;
 }
 #container #soundcloud nav ul li a {
+  cursor: pointer;
   font-size: 33px;
 }
 #container #soundcloud nav ul li:first-of-type {
