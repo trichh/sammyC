@@ -4,6 +4,7 @@ html {
 }
 body {
   background-color: black;
+  font-family: helvetica;
   margin: 0;
   padding: 0;
 }
@@ -16,22 +17,28 @@ body {
   padding-top: 15px;
   width: 300px;
 }
-#container nav ul, #container nav ul li {
+#container > nav ul, #container > nav ul li, #container #soundcloud nav ul, #container #soundcloud nav ul li {
   display: inline-block;
 }
-#container nav {
+#container > nav {
   margin: 0 auto;
   width: 400px;
 }
-#container nav ul li:not(:last-of-type) {
+#container > nav ul li:not(:last-of-type) {
   margin-right: 30px;
 }
-#container nav ul li a img {
+#container > nav ul li a img {
   width: 35px;
 }
-#container #gallery {
+#container #gallery, #container #soundcloud {
   margin: 0 auto;
   width: 395px;
+}
+#container #gallery {
+  width: 395px;
+}
+#container #soundcloud {
+  width: 317px;
 }
 #container #gallery img:first-of-type,  #container #gallery img:last-of-type {
   margin-bottom: 90px;
@@ -40,6 +47,27 @@ body {
 #container #gallery img.mySlides, #container #gallery video {
   height: 225px;
   width: 300px;
+}
+#container #soundcloud nav ul li a {
+  font-size: 33px;
+}
+#container #soundcloud nav ul li:first-of-type {
+  padding-right: 15px;
+}
+#container #soundcloud nav ul li:first-of-type a {
+  color: #FF3300;
+}
+#container #soundcloud nav ul li:nth-of-type(2) a {
+  color: white;
+}
+#container #soundcloud iframe {
+  margin-bottom: 25px;
+}
+#container #soundcloud p {
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
 }
 
 @media screen and (min-width: 950px) {
@@ -50,23 +78,32 @@ body {
     padding-bottom: 25px;
     width: 450px;
   }
-  #container nav {
+  #container > nav {
     margin-bottom: 25px;
     width: 500px;
   }
-  #container nav ul {
+  #container > nav ul {
     margin: 0;
     padding: 0;
   }
-  #container nav ul li:not(:last-of-type) {
+  #container > nav ul li:not(:last-of-type) {
     margin-right: 64px;
   }
-  #container nav ul li a img {
+  #container > nav ul li a img {
     width: 45px;
   }
-  #container #gallery {
+  #container #gallery, #container #soundcloud {
     margin: 0 auto 25px auto;
     width: 725px;
+  }
+  #container #soundcloud nav ul {
+    padding: 0;
+  }
+  #container #soundcloud nav ul li:first-of-type {
+    padding-right: 35px;
+  }
+  #container #soundcloud iframe {
+    width: 100%;
   }
   #container #gallery img:first-of-type,  #container #gallery img:last-of-type {
     margin-bottom: 175px;
@@ -78,7 +115,7 @@ body {
   }
 }
 @media screen and (min-width: 1050px) {
-  #container #gallery {
+  #container #gallery, #container #soundcloud {
     width: 850px;
   }
   #container #gallery img:first-of-type,  #container #gallery img:last-of-type {

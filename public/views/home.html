@@ -13,7 +13,6 @@
   </nav>
   <section id="gallery">
     <img src="assets/imgs/leftArrow.png" width="50" ng-click="scrollGallery(-1)" />
-    <img src="assets/imgs/galleryPhoto1.jpg" class="mySlides" />
     <img src="assets/imgs/galleryPhoto2.jpg" class="mySlides" />
     <img src="assets/imgs/galleryPhoto3.jpg" class="mySlides" />
     <img src="assets/imgs/galleryPhoto4.jpg" class="mySlides" />
@@ -23,5 +22,29 @@
       Your browser does not support the video!
     </video>
     <img src="assets/imgs/rightArrow.png" width="50" ng-click="scrollGallery(+1)" />
+  </section>
+  <section id="soundcloud">
+    <nav>
+      <ul>
+        <li ng-click="showSingles()"><a id="singles">Singles</a></li>
+        <li ng-click="showAlbums()"><a id="albums">Albums</a></li>
+      </ul>
+    </nav>
+    <iframe ng-show="single" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/294761507&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+    <iframe ng-show="single" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/246110578&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+    <iframe ng-show="single" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/282412899&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+    <iframe ng-show="less" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/292108263&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+    <iframe ng-show="less" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285464854&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+    <iframe ng-show="less" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270509112&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+    <iframe ng-show="album" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/242998462&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+    <p ng-click="showMore()" ng-hide="more">View More</p>
+    <p ng-click="showLess()" ng-show="less">View Less</p>
   </section>
 </div>

@@ -1,6 +1,10 @@
 angular.module('sammyC').controller('HomeCtrl', function($scope) {
   var slideIndex = 1;
   showDivs(slideIndex);
+  $scope.less = false;
+  $scope.more = false;
+  $scope.single = true;
+  $scope.album = false;
 
   function showDivs(n) {
     var i;
@@ -17,4 +21,30 @@ angular.module('sammyC').controller('HomeCtrl', function($scope) {
     showDivs(slideIndex += n);
   }
 
+  $scope.showAlbums = function() {
+    $scope.less = false;
+    $scope.single = false;
+    $scope.album = true;
+    $scope.more = true;
+    document.getElementById('albums').style.color = "#FF3300";
+    document.getElementById('singles').style.color = "white";
+  }
+
+  $scope.showSingles = function() {
+    $scope.less = false;
+    $scope.single = true;
+    $scope.album = false;
+    $scope.more = false;
+    document.getElementById('albums').style.color = "white";
+    document.getElementById('singles').style.color = "#FF3300";
+  }
+
+  $scope.showMore = function() {
+    $scope.less = true;
+    $scope.more = true;
+  }
+  $scope.showLess = function() {
+    $scope.less = false;
+    $scope.more = false;
+  }
 });
