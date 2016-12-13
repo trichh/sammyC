@@ -27,6 +27,7 @@
       <ul>
         <li ng-click="showSingles()"><a id="singles">Singles</a></li>
         <li ng-click="showAlbums()"><a id="albums">Albums</a></li>
+        <li ng-click="showContact()"><a id="contact">Contact</a></li>
       </ul>
     </nav>
     <iframe ng-show="single" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/294761507&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
@@ -45,5 +46,11 @@
     </iframe>
     <p ng-click="showMore()" ng-hide="more">View More</p>
     <p ng-click="showLess()" ng-show="less">View Less</p>
+    <form ng-show="contact" method="post" ng-submit="sendEmail()">
+      <input type="text" name="email" ng-model="email" placeholder="Email address" />
+      <input type="text" name="subject" ng-model="subject" placeholder="Subject" />
+      <textarea ng-model="message" placeholder="Message..."></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
 </div>

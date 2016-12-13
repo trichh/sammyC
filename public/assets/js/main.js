@@ -12,13 +12,14 @@ angular.module('sammyC').config(["$routeProvider", "$locationProvider", function
     .otherwise('/')
 }])
 
-angular.module('sammyC').controller('HomeCtrl', ["$scope", function($scope) {
+angular.module('sammyC').controller('HomeCtrl', ["$scope", "$http", function($scope, $http) {
   var slideIndex = 1;
   showDivs(slideIndex);
   $scope.less = false;
   $scope.more = false;
   $scope.single = true;
   $scope.album = false;
+  $scope.contact = false;
 
   function showDivs(n) {
     var i;
@@ -40,8 +41,11 @@ angular.module('sammyC').controller('HomeCtrl', ["$scope", function($scope) {
     $scope.single = false;
     $scope.album = true;
     $scope.more = true;
+    $scope.contact = false;
     document.getElementById('albums').style.color = "#FF3300";
     document.getElementById('singles').style.color = "white";
+    document.getElementById('contact').style.color = "white";
+    document.getElementById('shop').style.color = "white";
   }
 
   $scope.showSingles = function() {
@@ -49,16 +53,51 @@ angular.module('sammyC').controller('HomeCtrl', ["$scope", function($scope) {
     $scope.single = true;
     $scope.album = false;
     $scope.more = false;
+    $scope.contact = false;
     document.getElementById('albums').style.color = "white";
     document.getElementById('singles').style.color = "#FF3300";
+    document.getElementById('contact').style.color = "white";
+    document.getElementById('shop').style.color = "white";
+  }
+
+  $scope.showContact = function() {
+    $scope.less = false;
+    $scope.single = false;
+    $scope.album = false;
+    $scope.more = true;
+    $scope.contact = true;
+    document.getElementById('albums').style.color = "white";
+    document.getElementById('singles').style.color = "white";
+    document.getElementById('contact').style.color = "#FF3300";
+    document.getElementById('shop').style.color = "white";
   }
 
   $scope.showMore = function() {
     $scope.less = true;
     $scope.more = true;
   }
+
   $scope.showLess = function() {
     $scope.less = false;
     $scope.more = false;
+  }
+
+  $scope.sendEmail = function() {
+    var email = $scope.email;
+    var recipient = "sammyc407music@gmail.com";
+    var subject = $scope.subject;
+    var message = $scope.message + "\n\nFrom: " + email;
+
+    $http.post('/api/email', {
+      email: email,
+      recipient: recipient,
+      subject: subject,
+      message: message
+    })
+    .then(function(data) {
+
+    });
+    
+    window.location.reload(true);
   }
 }]);
