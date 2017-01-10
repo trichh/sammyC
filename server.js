@@ -16,11 +16,8 @@ app.use(express.static('public'));
 // Uses packages downloaded with bower
 app.use('/public/lib', express.static(__dirname + '/public/lib'));
 
+// Creating email Credentials to send email with
 var emailCredentials = 'smtps://' + process.env.EMAIL + '%40gmail.com:' + process.env.PASS + '@smtp.gmail.com';
-
-console.log("EMAIL: ", process.env.EMAIL);
-console.log("PASSWORD: ", process.env.PASS);
-console.log("EMAIL CREDENTIALS: ", emailCredentials);
 
 // Sending email
 app.post('/email', function(req, res) {
