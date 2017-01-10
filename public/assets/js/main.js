@@ -88,7 +88,7 @@ angular.module('sammyC').controller('HomeCtrl', ["$scope", "$http", function($sc
     var subject = $scope.subject;
     var message = $scope.message + "\n\nFrom: " + email;
 
-    $http.post('/api/email', {
+    $http.post('/email', {
       email: email,
       recipient: recipient,
       subject: subject,
@@ -97,7 +97,7 @@ angular.module('sammyC').controller('HomeCtrl', ["$scope", "$http", function($sc
     .then(function(data) {
 
     });
-    
+
     window.location.reload(true);
   }
 }]);
