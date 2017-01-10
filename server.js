@@ -8,6 +8,8 @@ var app = express();
 // Use everything inside of public folder
 app.use(express.static('public'));
 
+app.use('/public/lib', express.static(__dirname + '/public/lib'));
+
 // Send index.html on any route
 app.get('*', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
