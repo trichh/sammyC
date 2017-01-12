@@ -14,6 +14,7 @@ angular.module('sammyC').config(["$routeProvider", "$locationProvider", function
 
 angular.module('sammyC').controller('HomeCtrl', ["$scope", "$http", function($scope, $http) {
   var slideIndex = 1;
+  $scope.shop = false;
   showDivs(slideIndex);
   $scope.less = false;
   $scope.more = false;
@@ -42,6 +43,7 @@ angular.module('sammyC').controller('HomeCtrl', ["$scope", "$http", function($sc
     $scope.album = true;
     $scope.more = true;
     $scope.contact = false;
+    $scope.shop = false;
     document.getElementById('albums').style.color = "#FF3300";
     document.getElementById('singles').style.color = "white";
     document.getElementById('contact').style.color = "white";
@@ -54,6 +56,7 @@ angular.module('sammyC').controller('HomeCtrl', ["$scope", "$http", function($sc
     $scope.album = false;
     $scope.more = false;
     $scope.contact = false;
+    $scope.shop = false;
     document.getElementById('albums').style.color = "white";
     document.getElementById('singles').style.color = "#FF3300";
     document.getElementById('contact').style.color = "white";
@@ -66,10 +69,24 @@ angular.module('sammyC').controller('HomeCtrl', ["$scope", "$http", function($sc
     $scope.album = false;
     $scope.more = true;
     $scope.contact = true;
+    $scope.shop = false;
     document.getElementById('albums').style.color = "white";
     document.getElementById('singles').style.color = "white";
     document.getElementById('contact').style.color = "#FF3300";
     document.getElementById('shop').style.color = "white";
+  }
+
+  $scope.showShop = function() {
+    $scope.less = false;
+    $scope.single = false;
+    $scope.album = false;
+    $scope.more = true;
+    $scope.contact = false;
+    $scope.shop = true;
+    document.getElementById('albums').style.color = "white";
+    document.getElementById('singles').style.color = "white";
+    document.getElementById('contact').style.color = "white";
+    document.getElementById('shop').style.color = "#FF3300";
   }
 
   $scope.showMore = function() {

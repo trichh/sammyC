@@ -49,6 +49,10 @@ body {
   height: 225px;
   width: 300px;
 }
+#container #gallery img.smokeSomethin {
+  height: 180px;
+  width: 300px;
+}
 #container #soundcloud nav ul {
   padding: 0;
 }
@@ -97,6 +101,11 @@ body {
   display: block;
   font-size: 22px;
   padding: 3px 10px 5px 10px;
+}
+#container #soundcloud h2 {
+  color: white;
+  font-size: 35px;
+  text-align: center;
 }
 
 @media screen and (min-width: 950px) {

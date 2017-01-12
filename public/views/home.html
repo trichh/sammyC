@@ -15,7 +15,7 @@
     <img src="assets/imgs/leftArrow.png" width="50" ng-click="scrollGallery(-1)" />
     <img src="assets/imgs/galleryPhoto3.jpg" class="mySlides" />
     <img src="assets/imgs/galleryPhoto2.jpg" class="mySlides" />
-    <img src="assets/imgs/galleryPhoto1.jpg" class="mySlides" />
+    <img src="assets/imgs/galleryPhoto1.jpg" class="mySlides smokeSomethin" />
     <video class="mySlides" controls>
       <source src="assets/imgs/concert.mp4" type="video/mp4">
       <source src="assets/imgs/concert.ogg" type="video/ogg">
@@ -29,6 +29,7 @@
         <li ng-click="showSingles()"><a id="singles">Singles</a></li>
         <li ng-click="showAlbums()"><a id="albums">Albums</a></li>
         <li ng-click="showContact()"><a id="contact">Contact</a></li>
+        <li ng-click="showShop()"><a id="shop">Shop</a></li>
       </ul>
     </nav>
     <iframe ng-show="single" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/294761507&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
@@ -53,5 +54,6 @@
       <textarea ng-model="message" placeholder="Message..."></textarea>
       <button type="submit">Send</button>
     </form>
+    <h2 ng-show="shop">Coming soon.</h2>
   </section>
 </div>
