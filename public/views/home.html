@@ -5,7 +5,7 @@
   <nav>
     <ul>
       <li><a href="https://soundcloud.com/sammyc407"><img src="assets/imgs/soundcloud.png" alt="Sammy C's Soundcloud" /></a></li>
-      <li><a href="https://www.youtube.com/channel/UCLSNxWqWzUlyg9roEwiinBg"><img src="assets/imgs/youtube.png" alt="Sammy C's YouTube" /></a></li>
+      <li><a href="https://www.youtube.com/channel/UCHqzhq5MFlSes-93VVwViTg"><img src="assets/imgs/youtube.png" alt="Sammy C's YouTube" /></a></li>
       <li><a href="https://twitter.com/SammyC407"><img src="assets/imgs/twitter.png" alt="Sammy C's Twitter" /></a></li>
       <li><a href="https://www.instagram.com/sammyc407/"><img src="assets/imgs/instagram.png" alt="Sammy C's Instagram" /></a></li>
       <li><a href="https://www.facebook.com/sammyc407/"><img src="assets/imgs/facebook.png" alt="Sammy C's Facebook" /></a></li>
@@ -16,22 +16,19 @@
     <img src="assets/imgs/galleryPhoto3.jpg" class="mySlides" />
     <img src="assets/imgs/galleryPhoto2.jpg" class="mySlides" />
     <img src="assets/imgs/galleryPhoto1.jpg" class="mySlides smokeSomethin" />
-    <video class="mySlides" controls>
-      <source src="assets/imgs/concert.mp4" type="video/mp4">
-      <source src="assets/imgs/concert.ogg" type="video/ogg">
-      Your browser does not support the video!
-    </video>
     <img src="assets/imgs/rightArrow.png" width="50" ng-click="scrollGallery(+1)" />
   </section>
   <section id="soundcloud">
     <nav>
       <ul>
-        <li ng-click="showSingles()"><a id="singles">Singles</a></li>
         <li ng-click="showAlbums()"><a id="albums">Albums</a></li>
+        <li ng-click="showSingles()"><a id="singles">Singles</a></li>
+        <li ng-click="showVideos()"><a id="videos">Videos</a></li>
         <li ng-click="showContact()"><a id="contact">Contact</a></li>
-        <li ng-click="showShop()"><a id="shop">Shop</a></li>
       </ul>
     </nav>
+    <iframe ng-show="album" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/242998462&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
     <iframe ng-show="single" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/294761507&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
     </iframe>
     <iframe ng-show="single" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/246110578&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
@@ -42,18 +39,14 @@
     </iframe>
     <iframe ng-show="less" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285464854&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
     </iframe>
-    <iframe ng-show="less" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270509112&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-    </iframe>
-    <iframe ng-show="album" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/242998462&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-    </iframe>
     <p ng-click="showMore()" ng-hide="more">View More</p>
     <p ng-click="showLess()" ng-show="less">View Less</p>
+    <iframe ng-show="videos" width="560" height="400" src="https://www.youtube.com/embed/6xz1adX-Ii8" frameborder="0" allowfullscreen></iframe>
     <form ng-show="contact" method="post" ng-submit="sendEmail()">
       <input type="text" name="email" ng-model="email" placeholder="Email address" />
       <input type="text" name="subject" ng-model="subject" placeholder="Subject" />
       <textarea ng-model="message" placeholder="Message..."></textarea>
       <button type="submit">Send</button>
     </form>
-    <h2 ng-show="shop">Coming soon.</h2>
   </section>
 </div>
